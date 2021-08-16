@@ -15,7 +15,7 @@ FPS = 60
 class Fighter(pygame.sprite.Sprite):
     def __init__(self):
         super(Fighter, self).__init__()
-        self.image = pygame.image.load('conny.png')
+        self.image = pygame.image.load('fighter.png')
         self.rect = self.image.get_rect()   # 이미지 크기
         self.rect.x = int(WINDOW_WIDTH / 2)
         self.rect.y = WINDOW_HEIGHT - self.rect.height
@@ -107,7 +107,7 @@ def occur_explosion(surface, x, y):
 
 def game_loop():
     default_font = pygame.font.Font('NanumGothic.ttf', 28)
-    background_image = pygame.image.load('mingddong.png')
+    background_image = pygame.image.load('background.png')
     gameover_sound = pygame.mixer.Sound('gameover.wav')
     pygame.mixer.music.load('music.wav')
     pygame.mixer.music.play(-1)     # 무한반복 : -1
@@ -193,7 +193,7 @@ def game_loop():
 
 
 def game_menu():
-    start_image = pygame.image.load('ddodong.png')
+    start_image = pygame.image.load('background.png')
     screen.blit(start_image, [0, 0])
     draw_x = int(WINDOW_WIDTH / 2)
     draw_y = int(WINDOW_HEIGHT / 4)
